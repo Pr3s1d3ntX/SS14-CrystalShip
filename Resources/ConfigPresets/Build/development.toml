@@ -26,7 +26,7 @@ grid_splitting = false
 preload = false
 
 [salvage]
-expedition_cooldown = 30.0
+expedition_cooldown = 60.0
 
 [shuttle]
 grid_fill = true
@@ -39,6 +39,6 @@ preload_grids = true
 see_own_notes = true
 
 [ic]
-random_characters = true
+random_characters = false
 random_species_weights = ""
 ssd_sleep_time = 3600
