@@ -1,0 +1,53 @@
+- type: gameMap
+  id: TestStationMap
+  mapName: 'TestStationMap'
+  mapPath: /Maps/TestStationMap.yml
+  minPlayers: 0
+  maxPlayers: 10
+  stations:
+    TestShuttleMap:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Reclaims-The-Lost & Co. Shuttle'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: 'A'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency_plasma.yml
+        - type: StationCargoShuttle
+          path: /Maps/Shuttles/cargo_plasma.yml
+        - type: StationJobs
+          availableJobs: # 66 jobs total w/o latejoins & interns, 91 jobs total w/ latejoins & interns
+            #command (7)
+            
+            #service (15 - 17)
+            
+            #engineering (8)
+            ERTEngineer: [ 1, 1 ]
+            #medical (9)
+            ERTMedical: [ 1, 1 ]
+            #science (4)
+            
+            #security (9 - 11)
+            ERTSecurity: [ 1, 1 ]
+            #supply (8 - 10)
+            
+            #civilian (3 - 4+)
+            
+            #silicon (3 - 5)
+    TestStationMap:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Reclaims-The-Lost & Co. Station'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: 'A'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency_plasma.yml
+        - type: StationCargoShuttle
+          path: /Maps/Shuttles/cargo_plasma.yml
+        - type: StationJobs
+          availableJobs: # 66 jobs total w/o latejoins & interns, 91 jobs total w/ latejoins & interns
+            ERTLeader: [ 1, 1 ]
